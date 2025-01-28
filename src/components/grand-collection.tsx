@@ -23,7 +23,7 @@ export function GrandCollection() {
         </div>
         <div className="relative aspect-[3/4] md:aspect-[4/5] w-full">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20at%207.20.06%E2%80%AFPM-9kxo9lZ8z57jAmjuPClCV7d2uk24Rw.png"
+            src="/images/furniture.png"
             alt="Grand architectural space with hanging lantern"
             fill
             className="object-cover rounded-lg"

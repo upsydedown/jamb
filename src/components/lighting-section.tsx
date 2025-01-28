@@ -7,7 +7,7 @@ export function LightingSection() {
       <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
         <div className="relative aspect-[3/4] md:aspect-[4/5] w-full">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20at%207.09.04%E2%80%AFPM-5ERYAOSWAtnoXU4VTgIl3tm0qbc4WT.png"
+            src="/images/furniture.png"
             alt="Elegant hanging lantern in a classical interior"
             fill
             className="object-cover rounded-lg"

@@ -28,7 +28,7 @@ export function FireplacesSection() {
         </div>
         <div className="relative aspect-[3/4] md:aspect-[4/5] w-full order-1 lg:order-2">
           <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-01-28%20at%207.08.48%E2%80%AFPM-16uuQP2qaMwlKbHZbCj60BfjVCOepa.png"
+            src="/images/fireplaces.png"
             alt="Elegant fireplace with ornate mirror"
             fill
             className="object-cover rounded-lg"

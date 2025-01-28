@@ -22,7 +22,7 @@ export function FurnitureSection() {
         </div>
         <div className="relative aspect-[3/4] md:aspect-[4/5] w-full">
           <Image
-            src="/placeholder.svg?height=800&width=600"
+            src="/images/furniture.png"
             alt="Elegant white sofa beneath ornate wall panel"
             fill
             className="object-cover rounded-lg"
