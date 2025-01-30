@@ -16,7 +16,7 @@ interface ProductCarouselProps {
 
 export function ProductCarousel({ title, products }: ProductCarouselProps) {
   return (
-    <section className="py-12 md:py-16">
+    <section className="py-12 md:py-16 flex items-center justify-center bg-[#E3E3E3]">
       <div className="container px-4 md:px-6">
         <h3 className="text-center text-gray-600 mb-8 text-sm md:text-base">{title}</h3>
         <Carousel
@@ -30,7 +30,7 @@ export function ProductCarousel({ title, products }: ProductCarouselProps) {
             {products.map((product, index) => (
               <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
                 <div className="space-y-3">
-                  <div className="relative aspect-square bg-gray-100">
+                  <div className="relative aspect-square bg-transparent">
                     <Image
                       src={product.image || "/placeholder.svg"}
                       alt={product.title}
