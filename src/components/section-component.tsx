@@ -56,11 +56,10 @@ export function SectionComponent({
   )
 
   const ImageSection = () => (
-    <div className="relative w-auto h-auto max-w-full max-h-full">
+    <div className="relative w-fit h-fit">
     <Image
       src={image.src || "/placeholder.svg"}
       alt={image.alt}
-      // Only specify 'width'; remove 'height' so the image stays flexible in height
       width={image.width ?? 800}
       height={0}
       className="object-contain"
@@ -73,8 +72,7 @@ export function SectionComponent({
   return (
     <section
       style={{ backgroundColor }}
-      className="flex items-center justify-center mx-auto px-4 md:px-6 py-12 md:py-16 "
-    >
+      className="flex items-center justify-center mx-auto max-w-full w-full h-[990px] px-4 md:px-6 py-12 md:py-16">
       <div className="grid lg:grid-cols-2 gap-[151px] md:gap-[151px] items-center w-full max-w-[1243px] mx-auto">
         {/* 
           If you need to support switching the positions of ContentSection and ImageSection 

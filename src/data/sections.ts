@@ -63,6 +63,7 @@ export const grandSection: SectionProps = {
       src: "/images/grandCollection.png",
       alt: "Elegant fireplace with ornate mirror",
     },
+    backgroundColor:"#DFDAD7" 
   }
 
 export const subscribeSection: SectionProps = {
