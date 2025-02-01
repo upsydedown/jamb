@@ -674,17 +674,14 @@ video {
 .h-9 {
   height: 2.25rem;
 }
-.h-auto {
-  height: auto;
+.h-\[990px\] {
+  height: 990px;
 }
 .h-fit {
   height: fit-content;
 }
-.h-\[990px\] {
-  height: 990px;
-}
-.max-h-full {
-  max-height: 100%;
+.h-auto {
+  height: auto;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -698,17 +695,14 @@ video {
 .w-8 {
   width: 2rem;
 }
-.w-auto {
-  width: auto;
-}
 .w-fit {
   width: fit-content;
 }
 .w-full {
   width: 100%;
 }
-.w-\[1512px\] {
-  width: 1512px;
+.w-auto {
+  width: auto;
 }
 .min-w-0 {
   min-width: 0px;
@@ -734,14 +728,20 @@ video {
 .max-w-xl {
   max-width: 36rem;
 }
-.max-w-\[1512px\] {
-  max-width: 1512px;
+.max-w-\[1200px\] {
+  max-width: 1200px;
+}
+.max-w-\[1400px\] {
+  max-width: 1400px;
 }
 .flex-1 {
   flex: 1 1 0%;
 }
 .shrink-0 {
   flex-shrink: 0;
+}
+.shrink {
+  flex-shrink: 1;
 }
 .grow-0 {
   flex-grow: 0;
@@ -766,6 +766,9 @@ video {
 }
 .flex-col {
   flex-direction: column;
+}
+.place-items-center {
+  place-items: center;
 }
 .items-center {
   align-items: center;
@@ -892,6 +895,9 @@ video {
 }
 .object-cover {
   object-fit: cover;
+}
+.object-scale-down {
+  object-fit: scale-down;
 }
 .p-0 {
   padding: 0px;
@@ -1029,6 +1035,14 @@ video {
 }
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
+}
+.text-gray-500 {
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity, 1));
 }
 .underline-offset-4 {
   text-underline-offset: 4px;
@@ -1235,6 +1249,10 @@ video {
     flex-basis: 33.333333%;
   }
 
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .md\:gap-\[151px\] {
     gap: 151px;
   }
@@ -1291,12 +1309,20 @@ video {
     flex-basis: 25%;
   }
 
+  .lg\:basis-1\/5 {
+    flex-basis: 20%;
+  }
+
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .lg\:px-6 {
@@ -1318,9 +1344,9 @@ video {
   flex-shrink: 0;
 }
 
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.tsx","import":"Inter","arguments":[{"subsets":["latin"]}],"variableName":"inter"} ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Inter","arguments":[{"subsets":["latin"]}],"variableName":"inter"} ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /* cyrillic-ext */
 @font-face {
   font-family: 'Inter';

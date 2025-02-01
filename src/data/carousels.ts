@@ -19,18 +19,20 @@ export const lighting: CarouselData = {
     { image: "/images/lightdummy.png", title: "Lorem Ipsum", subtitle: "Subtitle" },
     { image: "/images/lightdummy.png", title: "Lorem Ipsum", subtitle: "Subtitle" },
   ],
+  columns: 5
 }
 
 
 export const furniture: CarouselData = {
   title: "Our latest furniture",
   products: [
-    { image: "/placeholder.svg?height=400&width=400", title: "Elegant Chair", subtitle: "Handcrafted Comfort" },
-    { image: "/placeholder.svg?height=400&width=400", title: "Vintage Table", subtitle: "Timeless Design" },
-    { image: "/placeholder.svg?height=400&width=400", title: "Modern Sofa", subtitle: "Contemporary Luxury" },
-    { image: "/placeholder.svg?height=400&width=400", title: "Antique Cabinet", subtitle: "Classic Storage" },
-    { image: "/placeholder.svg?height=400&width=400", title: "Designer Lamp", subtitle: "Illuminating Style" },
+    { image: "/images/LF01.png", title: "Elegant Chair", subtitle: "Handcrafted Comfort" },
+    { image: "/images/LF02.png", title: "Vintage Table", subtitle: "Timeless Design" },
+    { image: "/images/LF03.png", title: "Modern Sofa", subtitle: "Contemporary Luxury" },
+    { image: "/images/LF04.png", title: "Antique Cabinet", subtitle: "Classic Storage" },
+    { image: "/images/LF05.png", title: "Designer Lamp", subtitle: "Illuminating Style" },
   ],
+  columns: 5
 }
 
 
@@ -43,4 +45,5 @@ export const latestStories: CarouselData = {
     { image: "/images/storiesdummy.png", title: "Lorem Ipsum", subtitle: "Subtitle" },
     { image: "/images/storiesdummy.png", title: "Lorem Ipsum", subtitle: "Subtitle" },
   ],
+  columns: 5
 }

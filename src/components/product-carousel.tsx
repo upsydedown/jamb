@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 
 interface Product {
   image: string
@@ -9,49 +8,74 @@ interface Product {
   subtitle: string
 }
 
-interface ProductCarouselProps {
+interface ProductGridProps {
   title: string
   products: Product[]
+  /**
+   * Number of columns on large screens (e.g., 4 or 5).
+   * Defaults to 4 if none provided.
+   */
+  columns?: number
 }
 
-export function ProductCarousel({ title, products }: ProductCarouselProps) {
+function getLgGridCols(columns: number) {
+  switch (columns) {
+    case 5:
+      return "lg:grid-cols-5"
+    case 4:
+    default:
+      return "lg:grid-cols-4"
+  }
+}
+
+export function ProductGrid({
+  title,
+  products,
+  columns = 4, // default to 4 columns if not specified
+}: ProductGridProps) {
   return (
-    <section className="py-12 md:py-16 flex items-center justify-center bg-[#E3E3E3]">
-      <div className="container px-4 md:px-6">
-        <h3 className="text-center text-gray-600 mb-8 text-sm md:text-base">{title}</h3>
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full"
-        >
-          <CarouselContent className="-ml-2 md:-ml-4">
+    <section className="py-12 md:py-16 bg-[#E3E3E3]">
+      <div className="container mx-auto px-4 md:px-6">
+        {/* Center-aligned heading */}
+        <h3 className="text-center text-gray-600 mb-8 text-sm md:text-base">
+          {title}
+        </h3>
+
+        {/* Center the grid container, limit max width for seamless layout */}
+        <div className="mx-auto w-full max-w-[1400px]">
+          {/* A responsive grid that centers items and supports 4 or 5 columns */}
+          <div
+            className={`grid gap-8 sm:grid-cols-2 md:grid-cols-3 ${getLgGridCols(
+              columns
+            )} place-items-center`}
+          >
             {products.map((product, index) => (
-              <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
-                <div className="space-y-3">
-                  <div className="relative aspect-square bg-transparent">
-                    <Image
-                      src={product.image || "/placeholder.svg"}
-                      alt={product.title}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    />
-                  </div>
-                  <div className="text-center">
-                    <h4 className="text-sm md:text-base">{product.title}</h4>
-                    <p className="text-gray-600 text-xs md:text-sm">{product.subtitle}</p>
-                  </div>
+              <div key={index} className="space-y-3">
+                <div className="relative w-auto h-auto max-w-full mx-auto">
+                  <Image
+                    src={product.image || "/placeholder.svg"}
+                    alt={product.title}
+                    // Next.js "no-dimension" trick => uses the image's intrinsic size
+                    width={0}
+                    height={0}
+                    unoptimized
+                    // Ensures the image won't exceed its natural size on large screens
+                    // but can shrink on smaller screens if needed
+                    className="object-scale-down w-auto h-auto max-w-full"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  />
                 </div>
-              </CarouselItem>
+                <div className="text-center">
+                  <p className="text-gray-800 text-sm font-semibold">
+                    {product.title}
+                  </p>
+                  <p className="text-gray-500 text-xs">{product.subtitle}</p>
+                </div>
+              </div>
             ))}
-          </CarouselContent>
-          <CarouselPrevious className="hidden md:flex" />
-          <CarouselNext className="hidden md:flex" />
-        </Carousel>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
-

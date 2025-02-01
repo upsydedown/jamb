@@ -60,9 +60,10 @@ export function SectionComponent({
     <Image
       src={image.src || "/placeholder.svg"}
       alt={image.alt}
-      width={image.width ?? 800}
+      width={0}
       height={0}
-      className="object-contain"
+      unoptimized
+      className="object-scale-down w-auto h-auto max-w-full"
       sizes="(max-width: 1512px) 100vw, (max-width: 1200px) 50vw, auto"
     />
   </div>
@@ -74,10 +75,6 @@ export function SectionComponent({
       style={{ backgroundColor }}
       className="flex items-center justify-center mx-auto max-w-full w-full h-[990px] px-4 md:px-6 py-12 md:py-16">
       <div className="grid lg:grid-cols-2 gap-[151px] md:gap-[151px] items-center w-full max-w-[1243px] mx-auto">
-        {/* 
-          If you need to support switching the positions of ContentSection and ImageSection 
-          based on the `imagePosition` prop, add conditional rendering here. 
-        */}
         <ContentSection />
         <ImageSection />
       </div>
