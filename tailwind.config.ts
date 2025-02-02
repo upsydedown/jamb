@@ -9,6 +9,11 @@ export default {
   ],
   theme: {
   	extend: {
+		fontFamily: {
+			// name it "copernicius" or any name you want
+			copernicus: ["Galaxie Copernicus", "serif"],
+			// ^ fallback to a built-in font like 'serif', in case custom font fails
+		  },
   		colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',

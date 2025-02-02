@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: "Galaxie Copernicus";
+  src: url("/font/GalaxieCopernicus-Book.ttf") format(".ttf");
+  font-weight: 400; /* normal weight */
+  font-style: normal;
+  font-display: swap; /* optional but recommended */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -69,6 +78,7 @@
 @layer base {
   * {
     @apply border-border;
+    @apply font-copernicus;
   }
 
   body {

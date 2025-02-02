@@ -1,20 +1,14 @@
-"use client" // If you need client-side interactivity (e.g. for the newsletter form)
+"use client" // Only if you need client-side interactivity for your newsletter form
 
 import * as React from "react"
-import Link from "next/link"
 
-/**
- * site-footer.tsx
- * A single-file footer for Next/Shadcn/Tailwind.
- * Replicates the layout and content from the provided screenshot.
- */
 export default function SiteFooter() {
   return (
-    <footer className="w-full bg-[#EAE9E6] text-sm text-gray-700">
+    <footer className="w-full bg-[#E3E3E3] text-sm text-[#9C9C9D]">
       <div className="mx-auto max-w-7xl px-4 py-10">
-        {/* Use a 4-column grid to match the screenshot layout */}
+        {/* 4-column grid layout */}
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* COLUMN 1: Contact info + Chimneypieces */}
+          {/* COLUMN 1 */}
           <div className="space-y-6">
             {/* Contact info */}
             <div className="leading-relaxed">
@@ -40,11 +34,10 @@ export default function SiteFooter() {
               items={["French & Italian", "Georgian", "Regency"]}
             />
             <HrLine />
-            {/* “Sell an Antique Chimneypiece” is treated like a heading with no sub‐items */}
             <FooterGroup heading="Sell an Antique Chimneypiece" items={[]} />
           </div>
 
-          {/* COLUMN 2: Lighting + Furniture */}
+          {/* COLUMN 2 */}
           <div className="space-y-6">
             <HrLine />
             <FooterGroup
@@ -81,7 +74,7 @@ export default function SiteFooter() {
             />
           </div>
 
-          {/* COLUMN 3: Journal */}
+          {/* COLUMN 3 */}
           <div className="space-y-6">
             <HrLine />
             <FooterGroup
@@ -96,23 +89,24 @@ export default function SiteFooter() {
             />
           </div>
 
-          {/* COLUMN 4: Newsletter + About */}
+          {/* COLUMN 4 */}
           <div className="space-y-6">
-            {/* Newsletter section at top */}
+            {/* Newsletter Section */}
             <div className="space-y-4">
-              <h2 className="font-semibold uppercase tracking-wide">Newsletter</h2>
+              <h2 className="font-semibold uppercase tracking-wide text-[#000000]">
+                Newsletter
+              </h2>
               <div className="flex w-full max-w-sm items-center">
                 <input
                   type="text"
                   placeholder="Search"
-                  className="flex-1 border border-gray-400 bg-white px-2 py-1 text-sm outline-none"
+                  className="flex-1 border border-[#9C9C9D] bg-white px-2 py-1 text-sm outline-none text-[#9C9C9D]"
                 />
-                <button className="ml-2 whitespace-nowrap border border-gray-400 bg-white px-3 py-1 text-sm hover:bg-gray-100">
+                <button className="ml-2 whitespace-nowrap border border-[#9C9C9D] bg-white px-3 py-1 text-sm hover:bg-[#9C9C9D]/10 text-[#9C9C9D]">
                   Subscribe
                 </button>
               </div>
-              <label className="flex items-center space-x-2 text-gray-600">
-                {/* Example radio or checkbox—adjust as needed */}
+              <label className="flex items-center space-x-2 text-[#9C9C9D]">
                 <input type="radio" name="privacy" className="h-4 w-4" />
                 <span>I agree to our Privacy Policy</span>
               </label>
@@ -138,14 +132,11 @@ export default function SiteFooter() {
   )
 }
 
-// ----- Reusable mini-components in the same file -----
-
-/** A simple horizontal divider to match screenshot lines. */
+/** A simple horizontal divider. */
 function HrLine() {
-  return <hr className="border-t border-gray-400" />
+  return <hr className="border-t border-[#9C9C9D]" />
 }
 
-/** Renders a heading with a vertical list of items underneath. */
 interface FooterGroupProps {
   heading: string
   items: string[]
@@ -154,14 +145,14 @@ interface FooterGroupProps {
 function FooterGroup({ heading, items }: FooterGroupProps) {
   return (
     <div className="space-y-2">
-      <h3 className="font-semibold text-gray-900">{heading}</h3>
+      {/* Heading in bold black (#000000) */}
+      <h3 className="font-semibold text-[#000000]">{heading}</h3>
+
+      {/* Sub-items in lighter gray (#9C9C9D) */}
       {items.length > 0 && (
-        <ul className="space-y-1 text-gray-600">
+        <ul className="space-y-1 text-[#9C9C9D]">
           {items.map((item) => (
-            <li key={item}>
-              {/* Use Link if desired; here we show plain text to match screenshot */}
-              {item}
-            </li>
+            <li key={item}>{item}</li>
           ))}
         </ul>
       )}
