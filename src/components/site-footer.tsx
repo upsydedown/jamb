@@ -1,6 +1,7 @@
 "use client" // Only if you need client-side interactivity in the newsletter form
 
 import * as React from "react"
+import { cn } from "@/lib/utils" // Assuming cn utility is already set up in your project
 
 export default function SiteFooter() {
   return (
@@ -38,7 +39,6 @@ export default function SiteFooter() {
                 type="text"
                 placeholder="Search"
                 className="flex-1 border bg-white px-2 py-1 text-sm text-[#9C9C9D] outline-none font-polaris"
-
               />
               <button className="ml-2 whitespace-nowrap border bg-white px-3 py-1 text-sm text-[#9C9C9D] hover:bg-[#9C9C9D]/10">
                 Subscribe
