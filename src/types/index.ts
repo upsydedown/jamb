@@ -20,6 +20,7 @@ export interface Product {
   export interface CarouselData {
     title: string
     products: Product[]
+    columns: number
   }
   
   

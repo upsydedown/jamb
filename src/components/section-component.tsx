@@ -3,9 +3,10 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
-interface SectionProps {
+export interface SectionProps {
   title: string
   description: string
+  
   primaryButton: {
     text: string
     link: string
@@ -17,6 +18,7 @@ interface SectionProps {
   image: {
     src: string
     alt: string
+    width: number
   }
   imagePosition?: "left" | "right"
   backgroundColor?: string
@@ -40,8 +42,7 @@ export function SectionComponent({
       <div className="flex flex-col items-center space-y-3 pt-4 w-full">
         <Button
           variant="outline"
-          className="border border-[#737373] text-[#737373] text-sm md:text-base bg-transparent hover:bg-[#737373] hover:text-[#F3F0ED] px-6 py-2 rounded-none w-fit"
-        >
+          className="border border-[#737373] text-[#737373] text-sm md:text-base bg-transparent hover:bg-[#737373] hover:text-[#F3F0ED] px-6 py-2 rounded-none w-fit">
           {primaryButton.text}
         </Button>
         {secondaryButton && (
@@ -67,7 +68,7 @@ export function SectionComponent({
         unoptimized
         // Remove object-scale-down & max-w-full so it retains its original dimensions
         className="w-auto h-auto"
-        sizes="(max-width: auto) 100vw, (max-width: 1200px) 50vw, auto"
+        sizes="(max-width: 1512px) 100vw, (max-width: 1200px) 50vw, auto"
       />
     </div>
   )

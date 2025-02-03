@@ -81,7 +81,6 @@ export const subscribeSection: SectionProps = {
     alt: "Jamb Journal Cover",
     width: "410",
   },
-
   backgroundColor:"#F3F0ED"  
 }
 

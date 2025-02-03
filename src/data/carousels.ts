@@ -8,6 +8,7 @@ export const chimneyPiece: CarouselData = {
     { image: "/images/chimneydummy.png", title: "Lorem Ipsum", subtitle: "Subtitle" },
     { image: "/images/chimneydummy.png", title: "Lorem Ipsum", subtitle: "Subtitle" },
   ],
+  columns: 4
 }
 
 export const lighting: CarouselData = {
