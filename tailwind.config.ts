@@ -12,6 +12,7 @@ export default {
 		fontFamily: {
 			// name it "copernicius" or any name you want
 			copernicus: ["Galaxie Copernicus", "serif"],
+			polaris: ["Galaxie Polaris Condensed", "serif"],
 			// ^ fallback to a built-in font like 'serif', in case custom font fails
 		  },
   		colors: {

@@ -34,7 +34,10 @@ export function ProductGrid({
   columns = 4, // default to 4 columns
 }: ProductGridProps) {
   return (
-    <section className="py-12 md:py-16 bg-[#E3E3E3]">
+    <section
+      className="py-12 md:py-16 bg-[#E3E3E3]"
+      data-bgcolor="#E3E3E3" // <--- Added data-bgcolor matching the background
+    >
       <div className="container mx-auto px-4 md:px-6">
         <h3 className="text-center text-gray-700 mb-8 text-xl md:text-2xl font-serif">
           {title}
@@ -50,10 +53,6 @@ export function ProductGrid({
               key={index}
               className="flex flex-col h-full items-center justify-end"
             >
-              {/* 
-                1) flex flex-col items-center justify-center => 
-                   centers the image within available space 
-              */}
               <div className="flex flex-col items-center justify-center w-auto h-auto max-w-full mx-auto flex-1">
                 <Image
                   src={product.image || "/placeholder.svg"}

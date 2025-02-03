@@ -9,7 +9,7 @@ import { chimneyPiece, furniture, lighting, latestStories } from "@/data/carouse
 
 function HeroSection() {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto px-4 md:px-6 py-12 md:py-16">
+    <div className="flex flex-col items-center justify-center mx-auto px-4 md:px-6 py-12 md:py-16 mt-[45px]">
       <div className="relative w-auto h-auto max-w-full">
         <Image
           src="/images/heroImage.png"
@@ -26,12 +26,13 @@ function HeroSection() {
   )
 }
 
+
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
       <main className="flex-1">
-      <HeroSection />
+        <HeroSection />
         <SectionComponent {...fireplaceSection} />
         <SectionComponent {...lightingSection} />
         <ProductGrid {...chimneyPiece} />
@@ -46,4 +47,3 @@ export default function Home() {
     </div>
   )
 }
-
