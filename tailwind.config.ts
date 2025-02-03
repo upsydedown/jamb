@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-import tailwindcssAnimate from 'tailwindcss-animate';
+
 
 export default {
     darkMode: ["class"],
@@ -11,10 +11,10 @@ export default {
   theme: {
   	extend: {
 		fontFamily: {
-			// name it "copernicius" or any name you want
+		
 			copernicus: ["Galaxie Copernicus", "serif"],
 			polaris: ["Galaxie Polaris Condensed", "serif"],
-			// ^ fallback to a built-in font like 'serif', in case custom font fails
+			
 		  },
   		colors: {
   			background: 'hsl(var(--background))',
@@ -65,5 +65,7 @@ export default {
   		}
   	}
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [  
+    require('@tailwindcss/forms'), // Add the forms plugin  
+  ],  
 } satisfies Config;

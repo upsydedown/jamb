@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  * {
+    @apply border-border;
+    @apply font-copernicus;
+  }
+
+  body {
+    /* Override the default background using Tailwind’s bracket notation */
+    @apply bg-[#F3F0ED] text-foreground;
+  }
+}
 
 @font-face {
   font-family: "Galaxie Copernicus";
@@ -83,14 +94,3 @@
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-    @apply font-copernicus;
-  }
-
-  body {
-    /* Override the default background using Tailwind’s bracket notation */
-    @apply bg-[#F3F0ED] text-foreground;
-  }
-}
