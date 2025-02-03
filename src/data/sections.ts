@@ -15,6 +15,7 @@ export const fireplaceSection: SectionProps = {
   image: {
     src: "/images/fireplaces.png",
     alt: "Elegant fireplace with ornate mirror",
+    width: 0
   },
   backgroundColor:"#F3F0ED" 
 }
@@ -30,6 +31,7 @@ export const lightingSection: SectionProps = {
     image: {
       src: "/images/Lighting.png",
       alt: "Elegant fireplace with ornate mirror",
+      width: 0
     },
     backgroundColor:"#F3F0ED" 
   }
@@ -45,6 +47,7 @@ export const furnitureSection: SectionProps = {
   image: {
     src: "/images/furniture.png",
     alt: "Elegant white sofa beneath ornate wall panel",
+    width: 0
   },
   backgroundColor:"#F3F0ED" 
 }
@@ -64,6 +67,7 @@ export const grandSection: SectionProps = {
     image: {
       src: "/images/grandCollection.png",
       alt: "Elegant fireplace with ornate mirror",
+      width: 0
     },
     backgroundColor:"#DFDAD7"    
   }
@@ -79,7 +83,7 @@ export const subscribeSection: SectionProps = {
   image: {
     src: "/images/SubscribetoJamb.png",
     alt: "Jamb Journal Cover",
-    width: "410",
+    width: 410,
   },
   backgroundColor:"#F3F0ED"  
 }
