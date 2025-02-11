@@ -11,10 +11,6 @@ interface Product {
 interface ProductGridProps {
   title: string
   products: Product[]
-  /**
-   * Number of columns on large screens (e.g., 4 or 5).
-   * Defaults to 4 if none is provided.
-   */
   columns?: number
 }
 
@@ -39,7 +35,7 @@ export function ProductGrid({
       data-bgcolor="#E3E3E3" // <--- Added data-bgcolor matching the background
     >
       <div className="container mx-auto px-4 md:px-6">
-        <h3 className="text-center text-gray-700 mb-8 text-xl md:text-2xl font-serif">
+        <h3 className="text-center text-[#737373] mb-8 text-xl md:text-2xl font-serif">
           {title}
         </h3>
 
@@ -65,10 +61,10 @@ export function ProductGrid({
                 />
               </div>
               <div className="text-center mt-3">
-                <p className="text-gray-800 text-sm md:text-base font-semibold">
+                <p className="text-[#737373] text-sm md:text-base font-semibold">
                   {product.title}
                 </p>
-                <p className="text-gray-600 text-xs md:text-sm">
+                <p className="text-[#737373] text-xs md:text-sm">
                   {product.subtitle}
                 </p>
               </div>

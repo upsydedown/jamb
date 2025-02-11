@@ -4,11 +4,12 @@ import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
-import { motion } from "motion/react"
 
+// We removed: import { motion } from "motion/react"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  // Changed 'font-medium' to 'font-normal' so it doesn’t conflict with "Galaxie Copernicus Book (400)"
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-normal ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -21,7 +22,7 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        menu: "text-[#737373] hover:text-gray-900 bg-transparent px-3 sm:px-4 py-1 text-sm sm:text-base", // New menu variant
+        menu: "text-[#737373] hover:text-gray-900 bg-transparent px-3 sm:px-4 py-1 text-sm sm:text-base",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -47,17 +48,15 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
 
-    // 2) Create a motion-wrapped version of Comp
-    const MotionComp = motion(Comp as React.ElementType)
+    // Added custom Tailwind classes to mimic scale animations:
+    //  - transition-transform: for smooth transform changes
+    //  - hover:scale-105: enlarge slightly on hover
+    //  - active:scale-95: shrink slightly on click/press
+    const customAnimationClasses = "transition-transform hover:scale-105 active:scale-95"
 
     return (
-      <MotionComp
-        // 3) Apply the motion props: hover, tap, optional hover handlers
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.9, rotate: 0 }}
-        onHoverStart={() => {}}
-        onHoverEnd={() => {}}
-        className={cn(buttonVariants({ variant, size, className }))}
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }), customAnimationClasses)}
         ref={ref}
         {...props}
       />

@@ -57,7 +57,7 @@ export function SiteHeader() {
       <div className="w-full flex items-center justify-between h-auto md:h-[110px] pt-4 px-4 md:px-6">
         <Link href="/" className="inline-block text-xl md:text-2xl font-serif">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.svg"
             alt="Site Logo"
             width={108}
             height={45}

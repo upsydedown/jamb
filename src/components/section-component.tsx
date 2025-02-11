@@ -30,13 +30,12 @@ export function SectionComponent({
   primaryButton,
   secondaryButton,
   image,
-  // imagePosition = "right", <-- REMOVED, no longer used
   backgroundColor,
 }: SectionProps) {
   const ContentSection = () => (
     <div className="space-y-4 md:space-y-6 w-full max-w-[509px]">
-      <h2 className="text-3xl md:text-4xl text-center">{title}</h2>
-      <p className="text-gray-600 leading-relaxed max-w-xl text-sm md:text-base">
+      <h2 className="text-3xl text-[#000000] md:text-4xl text-center">{title}</h2>
+      <p className="text-[#000000] leading-relaxed max-w-xl text-sm md:text-base">
         {description}
       </p>
       <div className="flex flex-col items-center space-y-3 pt-4 w-full">

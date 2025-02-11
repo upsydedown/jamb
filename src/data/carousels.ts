@@ -27,11 +27,11 @@ export const lighting: CarouselData = {
 export const furniture: CarouselData = {
   title: "Our latest furniture",
   products: [
-    { image: "/images/LF01.png", title: "Elegant Chair", subtitle: "Handcrafted Comfort" },
-    { image: "/images/LF02.png", title: "Vintage Table", subtitle: "Timeless Design" },
-    { image: "/images/LF03.png", title: "Modern Sofa", subtitle: "Contemporary Luxury" },
-    { image: "/images/LF04.png", title: "Antique Cabinet", subtitle: "Classic Storage" },
-    { image: "/images/LF05.png", title: "Designer Lamp", subtitle: "Illuminating Style" },
+    { image: "/images/LF01.png", title: "Lorem Ipsum", subtitle: "Subtitle"},
+    { image: "/images/LF02.png", title: "Lorem Ipsum", subtitle: "Subtitle" },
+    { image: "/images/LF03.png", title: "Lorem Ipsum", subtitle: "Subtitle" },
+    { image: "/images/LF04.png", title: "Lorem Ipsum", subtitle: "Subtitle" },
+    { image: "/images/LF05.png", title: "Lorem Ipsum", subtitle: "Subtitle" },
   ],
   columns: 5
 }
