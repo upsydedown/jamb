@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Jamb:
 
-First, run the development server:
+Jamb is a premium gallery portfolio web application built with Next.js, shadcn UI components, and Tailwind CSS. It showcases antique houseware items (such as chairs, fireplaces, chimneys, and lamps) primarily from the Victorian era.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#### Features:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Elegant and responsive UI: Modern design that adapts to all screen sizes for a seamless user experience.
+- Antique collection showcase: Displays a curated collection of antique houseware items in high quality.
+- High performance: Built with Next.js to ensure fast loading and smooth navigation.
+- Modern styling: Utilizes Tailwind CSS and Shadcn UI components for consistent and visually appealing design.
+- Premium presentation: Focused on showcasing items in a gallery-style layout suited for a premium portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tech Stack:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Framework: Next.js
+- UI Components: Shadcn (component library for Next.js + Tailwind)
+- Styling: Tailwind CSS
 
-## Learn More
+## Installation:
 
-To learn more about Next.js, take a look at the following resources:
+You can set up the project locally using either npm or pnpm:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Using npm: Copy `npm install` and copy  `npm run dev` to run the project.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Using pnpm: Copy `pnpm install` and copy `pnpm run dev` to run the project.
 
-## Deploy on Vercel
+This will install the dependencies and start the development server. Visit the local URL `http://localhost:3000` in your browser to view the portfolio.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Note: The project is currently facing some errors preventing successful deployment. Please check the repository for the latest status, as these issues may have been resolved by the time you visit. Updated information or fixes will be available in the repository’s documentation or issue tracker.
+
+## License: 
+
+This project is licensed under the MIT License.
